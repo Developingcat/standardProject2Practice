@@ -1,0 +1,74 @@
+Beginning part: <- Main function! 
+    Print things!! Make it pretty!! Header!! 
+
+    ##################################
+    ##                              ##
+    ##      Welcome to loan         ##
+    ##     Payment Calculator!      ##
+    ##                              ##
+    ##################################
+
+    Collect the user inputs; 
+    1. principal = Principal ( Float ) -> get_principal()
+    2.  annual_rate = Annual Rate ( Float ) -> get_interest_rate()
+    3.  years = Years ( Integer ) -> get_years()
+
+    #######################
+
+    Calculates monthly payment with this formula: 
+
+    monthly_payment = calculate_monthly_payment(principal, annual_rate, years)
+
+
+    display results in a formatted summary 
+    -> which then calls another function, display_results(principal, annual_rate, monthly_payment)
+
+END 
+
+
+Functions! 
+
+function get_principal():
+    While loop until valid input!: 
+        Prompt the user for "Enter the loan principal amount($):" 
+        If input is a valid positive number then 
+            return the principal
+        else 
+            print error message 
+
+function get_interest_rate():
+    Run another while loop here until there's a valid input! 
+        prompt "Enter the annual interest rate! ( in %, e.g, 5.0 for 5%, or 6.5 for 6.5% ): "
+        if input is a valid positive number then 
+            Return annual_rate
+        else 
+            Print error message! 
+
+Function get_loan_term():
+    Loop until valid input: 
+        Prompt "Enter the loan term in years: "
+    if input is a valid positive integer then 
+        return years 
+    else 
+        print error message! 
+
+
+function calculate_monthly_payment(prin, anRate, years)
+    Monthly_rate = anRate / 12 / 100
+    number_of_payments = years * 12 
+    monthly_payment = (principal * Monthly_rate) / (1 - (1 + Monthly_rate) ^ (-number_of_payments) ) 
+    Return it all!! 
+
+
+function display_results(principal, annual_rate, years, monthly_payment):
+    total_payments = years * 12 
+    total_amount = monthly_payment * total_payments
+    print "Loan Payment Summary:"
+    print "Loan Principal: $ " + formatted principal 
+    print "Annual Interest: "  + formatted annual_rate + "%" 
+    print "Loan Term:" + years + "years"
+    print "Monthly Payment: $" + formatted monthly_payment
+    print "Total Payment: $" + formatted total payment 
+
+
+
